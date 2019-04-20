@@ -1,17 +1,17 @@
 package com.oast;
 
 public class Node {
-    private int ID;
+    private int id;
 
-    public Node(int ID){
-        this.ID = ID;
+    public Node(int id){
+        this.id = id;
     }
 
-    public int getID() {
-        return ID;
+    public int getId() {
+        return id;
     }
 
-    public void setID(int ID) {
-        this.ID = ID;
+    public void setId(int id) {
+        this.id = id;
     }
 }
