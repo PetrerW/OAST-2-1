@@ -21,6 +21,29 @@ public class Link {
         this.linkModule = 1;
     }
 
+    public Link(Node start, Node end, int numberOfModules, Module module, int linkModule, int id) {
+        this.start = start;
+        this.end = end;
+        this.numberOfModules = numberOfModules;
+        this.module = module;
+        this.linkModule = linkModule;
+        this.id = id;
+    }
+
+    /**
+     *
+     * @param params Line in order: <start node ID> <end node ID> <number of modules> <module cost> <link module>
+     * @param id ID of the link
+     */
+    public Link(String[] params, int id){
+        this.start = new Node(Integer.getInteger(params[0]));
+        this.end = new Node(Integer.getInteger(params[1]));
+        this.numberOfModules = Integer.getInteger(params[2]);
+        this.module = new Module(Integer.getInteger(params[3]));
+        this.linkModule = Integer.getInteger(params[4]);
+        this.id = id;
+    }
+
     public void setNumberOfModules(int numberOfModules) {
         this.numberOfModules = numberOfModules;
     }
