@@ -8,13 +8,19 @@ public class Demand {
     private Node end;
     private int volume;
     private ArrayList<DemandPath> demandPaths;
+    private int ID;
 
-    public Demand(Node start, Node end, int volume, ArrayList<DemandPath> demandPaths) {
+    public Demand(Node start, Node end, int volume, ArrayList<DemandPath> demandPaths, int ID) {
         this.start = start;
         this.end = end;
         this.volume = volume;
         this.demandPaths = demandPaths;
+        this.ID = ID;
     }
+
+    public int getID() { return ID; }
+
+    public void setID(int ID) { this.ID = ID; }
 
     public ArrayList<DemandPath> getDemandPaths() {
         return demandPaths;

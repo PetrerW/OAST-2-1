@@ -32,6 +32,13 @@ public class TopoParser {
         readFile();
         ArrayList<Link> links = this.readLinks();
 
+        //Set the current line at demands number
+        if(this.fileLines.get(currentLine).equals("-1"))
+            currentLine = currentLine + 2;
+        else if(this.fileLines.get(currentLine).equals(""))
+            currentLine++;
+
+
         //TODO get number of demands and initialize list with it
         Network Net = new Network(links, new ArrayList<Demand>(0));
 
@@ -45,7 +52,7 @@ public class TopoParser {
             Scanner in = new Scanner(new FileReader(filename));
 
             while(in.hasNext()) {
-                fileLines.add(in.next());
+                fileLines.add(in.nextLine());
             }
             in.close();
 
@@ -62,7 +69,7 @@ public class TopoParser {
      * @return
      */
     public Link readLink(String line, int id){
-        if(line.length() == 5){
+        if(line.split(" ").length == 5){
             String[] params = line.split(" ");
             return new Link(params, id);
         }
@@ -72,7 +79,15 @@ public class TopoParser {
         }
     }
 
-    public Demand readDemand(String line){
+    public ArrayList<Demand> readDemans(){
+        int numberOfDemands = Integer.parseInt(fileLines.get(currentLine));
+        ArrayList<Demand> demands = new ArrayList<>(numberOfDemands);
+        int DemandID = 1;
+        //TODO
+        return null;
+    }
+
+    public Demand readDemand(){
         //TODO
         return null;
     }
@@ -88,13 +103,13 @@ public class TopoParser {
      */
     public ArrayList<Link> readLinks(){
         this.currentLine = 0;
-        int numberOfLinks = Integer.getInteger(fileLines.get(0));
+        int numberOfLinks = Integer.parseInt(fileLines.get(0));
         ArrayList<Link> links = new ArrayList<Link>(numberOfLinks);
 
         int linkID = 1;
 
         try{
-            for (;;currentLine++){
+            for (currentLine = 1;;currentLine++){
                 String line = fileLines.get(currentLine);
                 if(line.contains("-1"))
                     break;

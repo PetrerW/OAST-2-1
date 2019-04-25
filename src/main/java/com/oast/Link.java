@@ -36,11 +36,11 @@ public class Link {
      * @param id ID of the link
      */
     public Link(String[] params, int id){
-        this.start = new Node(Integer.getInteger(params[0]));
-        this.end = new Node(Integer.getInteger(params[1]));
-        this.numberOfModules = Integer.getInteger(params[2]);
-        this.module = new Module(Integer.getInteger(params[3]));
-        this.linkModule = Integer.getInteger(params[4]);
+        this.start = new Node(Integer.parseInt(params[0]));
+        this.end = new Node(Integer.parseInt(params[1]));
+        this.numberOfModules = Integer.parseInt(params[2]);
+        this.module = new Module(Integer.parseInt(params[3]));
+        this.linkModule = Integer.parseInt(params[4]);
         this.id = id;
     }
 
@@ -83,4 +83,28 @@ public class Link {
     public Module getModule() { return module; }
 
     public void setModule(Module module) { this.module = module; }
+
+    @Override
+    public boolean equals(Object o) {
+        // If the object is compared with itself then return true
+        if (o == this) {
+            return true;
+        }
+
+        /* Check if o is an instance of Complex or not
+          "null instanceof [type]" also returns false */
+        if (!(o instanceof Link)) {
+            return false;
+        }
+
+        // typecast o to Complex so that we can compare data members
+        Link l = (Link) o;
+
+        if(this.numberOfModules == l.numberOfModules && this.end.getId() == l.getEnd().getId() &&
+                this.start.getId() == l.getStart().getId() && this.id == l.id &&
+                this.linkModule == l.linkModule && this.module.getCost() == l.getModule().getCost())
+            return true;
+        else
+            return false;
+    }
 }
