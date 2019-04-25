@@ -18,6 +18,20 @@ public class Demand {
         this.ID = ID;
     }
 
+    /**
+     *
+     * @param params Parameters from the line: start node, end node, volume.
+     * @param demandPaths ArrayList of DemandPath objects
+     * @param ID
+     */
+    public Demand(String[] params, ArrayList<DemandPath> demandPaths, int ID){
+        this.start = new Node(Integer.parseInt(params[0]));
+        this.end = new Node(Integer.parseInt(params[1]));
+        this.volume = Integer.parseInt(params[2]);
+        this.demandPaths = demandPaths;
+        this.ID = ID;
+    }
+
     public int getID() { return ID; }
 
     public void setID(int ID) { this.ID = ID; }

@@ -79,22 +79,67 @@ public class TopoParser {
         }
     }
 
-    public ArrayList<Demand> readDemans(){
+    public ArrayList<Demand> readDemands(){
         int numberOfDemands = Integer.parseInt(fileLines.get(currentLine));
         ArrayList<Demand> demands = new ArrayList<>(numberOfDemands);
         int DemandID = 1;
-        //TODO
-        return null;
+
+        try{
+            for (;;currentLine++){
+                String line = fileLines.get(currentLine);
+                if(line.split("").length == 3){
+                    Demand D = readDemand(line, DemandID);
+                    if(D != null){
+                        demands.add(D);
+                        DemandID++;
+                    }else
+                        System.out.println("Demand hasn't been parsed. (readDemand returned null)");
+                }
+            }
+        }catch(Exception e){
+            System.out.println("Error while reading a demand line: " + e.getMessage());
+        }
+        return demands;
     }
 
-    public Demand readDemand(){
-        //TODO
-        return null;
+    public Demand readDemand(String line, int DemandID) throws Exception{
+
+        String[] params = line.split(" ");
+
+
+        if(params.length!=3){
+            throw new Exception("Wrong line size (" + line.split(" ").length + "), expected 3.");
+        }
+        else{
+            //read demand paths
+            currentLine++;
+            int numberOfDemandPaths = Integer.parseInt(fileLines.get(currentLine));
+
+            ArrayList<DemandPath> demandPaths = new ArrayList<>(numberOfDemandPaths);
+
+            for(;currentLine < currentLine + numberOfDemandPaths; currentLine++){
+                DemandPath DP = readDemandPath(fileLines.get(currentLine));
+                if(DP != null){
+                    demandPaths.add(DP);
+                }
+                else
+                    throw new Exception("Demand path was null");
+            }
+
+            Demand D = new Demand(params, demandPaths, DemandID);
+            return D;
+        }
     }
 
-    public DemandPath readDemandPath(String line){
-        //TODO
-        return null;
+    public DemandPath readDemandPath(String line) throws Exception{
+        String[] params = line.split(" ");
+        if(params.length != 3){
+            throw new Exception("Wrong line size (" + line.split(" ").length + "), expected 3.");
+        }
+        else{
+            //TODO
+            return new DemandPath();
+        }
     }
 
     /**
@@ -119,7 +164,7 @@ public class TopoParser {
                         links.add(link);
                         linkID++;
                     }else
-                        System.out.println("Link hasn't been parsed.");
+                        System.out.println("Link hasn't been parsed. (readLink returned null)");
                 }
             }
         }catch(Exception e){

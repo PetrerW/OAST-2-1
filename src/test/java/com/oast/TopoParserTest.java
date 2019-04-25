@@ -12,7 +12,7 @@ public class TopoParserTest {
 
     public TopoParser t;
 
-    public void initialize(String filepath){
+    public void initialize(String filepath) {
         t = new TopoParser(filepath);
     }
 
@@ -45,24 +45,40 @@ public class TopoParserTest {
     }
 
     @Test
+    public void readLinks() {
+        initialize("./net/net4.txt");
+        ArrayList<String> lines = t.readFile();
+        ArrayList<Link> links = t.readLinks();
+        ArrayList<Link> trueLinks = new ArrayList<>(5);
+        for (int i = 1; i < 6; i++) {
+            trueLinks.add(t.readLink(lines.get(i), i));
+        }
+        Assert.assertArrayEquals(trueLinks.toArray(), links.toArray());
+    }
+
+    @Test
+    public void readDemands() {
+        //TODO
+    }
+
+
+    @Test
     public void readDemand() {
         //TODO
     }
 
     @Test
     public void readDemandPath() {
-        //TODO
-    }
+        String[] lines = {"1 2", "2 1 3", "3 1 4 5"};
+        DemandPath DP1 = t.readDemandPath(lines[0]);
+        DemandPath DP1_true = new DemandPath(1, new int[] {2});
+        DemandPath DP2 = t.readDemandPath(lines[1]);
+        DemandPath DP2_true = new DemandPath(2, new int[] {1, 3});
+        DemandPath DP3 = t.readDemandPath(lines[1]);
+        DemandPath DP3_true = new DemandPath(3, new int[] {1, 4, 5});
 
-    @Test
-    public void readLinks() {
-        initialize("./net/net4.txt");
-        ArrayList<String> lines = t.readFile();
-        ArrayList<Link> links = t.readLinks();
-        ArrayList<Link> trueLinks = new ArrayList<>(5);
-        for(int i = 1; i < 6; i++){
-            trueLinks.add(t.readLink(lines.get(i), i));
-        }
-        Assert.assertArrayEquals(trueLinks.toArray(), links.toArray());
+        Assert.assertEquals(DP1, DP1_true);
+        Assert.assertEquals(DP2, DP2_true);
+        Assert.assertEquals(DP3, DP3_true);
     }
 }
