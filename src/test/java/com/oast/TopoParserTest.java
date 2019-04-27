@@ -64,21 +64,30 @@ public class TopoParserTest {
 
     @Test
     public void readDemand() {
-        //TODO
+        initialize("./net/net4.txt");
+        t.currentLine = 11;
     }
 
     @Test
     public void readDemandPath() {
+        initialize("./net/net4.txt");
         String[] lines = {"1 2", "2 1 3", "3 1 4 5"};
         DemandPath DP1 = t.readDemandPath(lines[0]);
         DemandPath DP1_true = new DemandPath(1, new int[] {2});
         DemandPath DP2 = t.readDemandPath(lines[1]);
         DemandPath DP2_true = new DemandPath(2, new int[] {1, 3});
-        DemandPath DP3 = t.readDemandPath(lines[1]);
+        DemandPath DP3 = t.readDemandPath(lines[2]);
         DemandPath DP3_true = new DemandPath(3, new int[] {1, 4, 5});
 
-        Assert.assertEquals(DP1, DP1_true);
-        Assert.assertEquals(DP2, DP2_true);
-        Assert.assertEquals(DP3, DP3_true);
+        Assert.assertEquals(DP1.getId(), DP1_true.getId());
+        Assert.assertArrayEquals(DP1.getLinks(), DP1_true.getLinks());
+        Assert.assertEquals(DP2.getId(), DP2_true.getId());
+        Assert.assertArrayEquals(DP2.getLinks(), DP2_true.getLinks());
+        Assert.assertEquals(DP3.getId(), DP3_true.getId());
+        Assert.assertArrayEquals(DP3.getLinks(), DP3_true.getLinks());
+    }
+
+    @Test
+    public void readDemandPath1() {
     }
 }

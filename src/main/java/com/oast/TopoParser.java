@@ -38,7 +38,6 @@ public class TopoParser {
         else if(this.fileLines.get(currentLine).equals(""))
             currentLine++;
 
-
         //TODO get number of demands and initialize list with it
         Network Net = new Network(links, new ArrayList<Demand>(0));
 
@@ -83,11 +82,12 @@ public class TopoParser {
         int numberOfDemands = Integer.parseInt(fileLines.get(currentLine));
         ArrayList<Demand> demands = new ArrayList<>(numberOfDemands);
         int DemandID = 1;
+        currentLine++;
 
         try{
             for (;;currentLine++){
                 String line = fileLines.get(currentLine);
-                if(line.split("").length == 3){
+                if(line.split(" ").length == 3){
                     Demand D = readDemand(line, DemandID);
                     if(D != null){
                         demands.add(D);
@@ -131,15 +131,15 @@ public class TopoParser {
         }
     }
 
-    public DemandPath readDemandPath(String line) throws Exception{
-        String[] params = line.split(" ");
-        if(params.length != 3){
-            throw new Exception("Wrong line size (" + line.split(" ").length + "), expected 3.");
-        }
-        else{
-            //TODO
-            return new DemandPath();
-        }
+    public DemandPath readDemandPath(String line){
+            String[] params = line.split(" ");
+            if(params.length >= 0){
+                return new DemandPath(params);
+            }
+            else{
+                System.out.println("X");
+                return null;
+            }
     }
 
     /**
