@@ -1,6 +1,7 @@
 package com.oast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Demand {
     //TODO
@@ -66,5 +67,28 @@ public class Demand {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        // If the object is compared with itself then return true
+        if (o == this) {
+            return true;
+        }
+
+        /* Check if o is an instance of Complex or not
+          "null instanceof [type]" also returns false */
+        if (!(o instanceof Demand)) {
+            return false;
+        }
+
+        // typecast o to Complex so that we can compare data members
+        Demand d = (Demand) o;
+
+        if(d.volume == this.volume && Arrays.equals(this.demandPaths.toArray(), d.demandPaths.toArray()) &&
+                this.end.equals(d.end) && this.start.equals(d.start) && this.ID == d.ID)
+            return true;
+        else
+            return false;
     }
 }

@@ -28,7 +28,7 @@ public class TopoParser {
         this.currentLine = 0;
     }
 
-    public Network readNetwork(String filename){
+    public Network readNetwork(){
         readFile();
         ArrayList<Link> links = this.readLinks();
 
@@ -38,11 +38,10 @@ public class TopoParser {
         else if(this.fileLines.get(currentLine).equals(""))
             currentLine++;
 
-        //TODO get number of demands and initialize list with it
-        Network Net = new Network(links, new ArrayList<Demand>(0));
+        ArrayList<Demand> demands = this.readDemands();
 
-        //TODO parse the rest of the lines in subfunctions
-        return null;
+        Network Net = new Network(links, demands);
+        return Net;
     }
 
     public ArrayList<String> readFile(){
@@ -85,16 +84,25 @@ public class TopoParser {
         currentLine++;
 
         try{
-            for (;;currentLine++){
+            for (;currentLine<fileLines.size();currentLine++){
+
                 String line = fileLines.get(currentLine);
+
                 if(line.split(" ").length == 3){
                     Demand D = readDemand(line, DemandID);
+
                     if(D != null){
                         demands.add(D);
                         DemandID++;
-                    }else
+                    }
+                    else
                         System.out.println("Demand hasn't been parsed. (readDemand returned null)");
                 }
+                else if (line.equals(""))
+                    continue;
+                else
+                    System.out.println("Wrong number of parameters (" + line.length() + "), expected 3.");
+
             }
         }catch(Exception e){
             System.out.println("Error while reading a demand line: " + e.getMessage());
@@ -102,10 +110,17 @@ public class TopoParser {
         return demands;
     }
 
+
+    /**
+     * Creates Demand object on the basis of lines read from .txt file
+     * @param line First line of the Demand line group
+     * @param DemandID
+     * @return
+     * @throws Exception
+     */
     public Demand readDemand(String line, int DemandID) throws Exception{
 
         String[] params = line.split(" ");
-
 
         if(params.length!=3){
             throw new Exception("Wrong line size (" + line.split(" ").length + "), expected 3.");
@@ -117,13 +132,20 @@ public class TopoParser {
 
             ArrayList<DemandPath> demandPaths = new ArrayList<>(numberOfDemandPaths);
 
-            for(;currentLine < currentLine + numberOfDemandPaths; currentLine++){
-                DemandPath DP = readDemandPath(fileLines.get(currentLine));
-                if(DP != null){
-                    demandPaths.add(DP);
+            currentLine++;
+            for(;currentLine < currentLine + numberOfDemandPaths && currentLine < fileLines.size(); currentLine++){
+                line = fileLines.get(currentLine);
+                if(line.equals("")){
+                    break;
                 }
-                else
-                    throw new Exception("Demand path was null");
+                else{
+                    DemandPath DP = readDemandPath(line);
+                    if(DP != null){
+                        demandPaths.add(DP);
+                    }
+                    else
+                        throw new Exception("Demand path was null");
+                }
             }
 
             Demand D = new Demand(params, demandPaths, DemandID);
