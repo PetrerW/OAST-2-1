@@ -40,9 +40,8 @@ public class TopoParser {
 
         ArrayList<Demand> demands = this.readDemands();
 
-        Network net = new Network(links, demands);
-
-        return net;
+        Network Net = new Network(links, demands);
+        return Net;
     }
 
     public ArrayList<String> readFile(){
@@ -115,11 +114,11 @@ public class TopoParser {
     /**
      * Creates Demand object on the basis of lines read from .txt file
      * @param line First line of the Demand line group
-     * @param demandID
+     * @param DemandID
      * @return
      * @throws Exception
      */
-    public Demand readDemand(String line, int demandID) throws Exception{
+    public Demand readDemand(String line, int DemandID) throws Exception{
 
         String[] params = line.split(" ");
 
@@ -134,39 +133,35 @@ public class TopoParser {
             ArrayList<DemandPath> demandPaths = new ArrayList<>(numberOfDemandPaths);
 
             currentLine++;
-            int i = 1;
             for(;currentLine < currentLine + numberOfDemandPaths && currentLine < fileLines.size(); currentLine++){
                 line = fileLines.get(currentLine);
                 if(line.equals("")){
                     break;
                 }
                 else{
-                    DemandPath dp = readDemandPath(line);
-                    dp.setDemandId(demandID);
-                    dp.setId(i);
-                    i++;
-                    if(dp != null){
-                        demandPaths.add(dp);
+                    DemandPath DP = readDemandPath(line);
+                    if(DP != null){
+                        demandPaths.add(DP);
                     }
                     else
                         throw new Exception("Demand path was null");
                 }
             }
 
-            Demand D = new Demand(params, demandPaths, demandID);
+            Demand D = new Demand(params, demandPaths, DemandID);
             return D;
         }
     }
 
     public DemandPath readDemandPath(String line){
-            String[] params = line.split(" ");
-            if(params.length >= 0){
-                return new DemandPath(params);
-            }
-            else{
-                System.out.println("X");
-                return null;
-            }
+        String[] params = line.split(" ");
+        if(params.length >= 0){
+            return new DemandPath(params);
+        }
+        else{
+            System.out.println("X");
+            return null;
+        }
     }
 
     /**

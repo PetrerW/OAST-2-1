@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args){
 
-        String path = "C:\\Users\\KABL\\Documents\\Studia\\OAST\\Projekt 2\\OAST-2-1\\net4";
+        String path = "./net/net4";
         TopoParser topoParser = new TopoParser(path);
 
         BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
@@ -23,5 +23,4 @@ public class Main {
         new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAP, bruteForceAlgorithm.getNetwork());
 
     }
-
 }
