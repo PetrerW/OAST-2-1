@@ -6,10 +6,15 @@ import java.util.Arrays;
 public class Network {
     private ArrayList<Link> links;
     private ArrayList<Demand> demands;
+    private int numberOfLinks;
+    private int numberOfDemands;
+
 
     public Network(ArrayList<Link> links, ArrayList<Demand> demands) {
         this.links = links;
         this.demands = demands;
+        this.numberOfLinks = links.size();
+        this.numberOfDemands = demands.size();
     }
 
     public ArrayList<Demand> getDemands() {
@@ -48,5 +53,21 @@ public class Network {
             return true;
         else
             return false;
+    }
+
+    public int getNumberOfLinks() {
+        return numberOfLinks;
+    }
+
+    public void setNumberOfLinks(int numberOfLinks) {
+        this.numberOfLinks = numberOfLinks;
+    }
+
+    public int getNumberOfDemands() {
+        return numberOfDemands;
+    }
+
+    public void setNumberOfDemands(int numberOfDemands) {
+        this.numberOfDemands = numberOfDemands;
     }
 }
