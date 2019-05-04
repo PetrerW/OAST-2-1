@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class DemandPath {
     private int id;
+    private int demandId;
 
     /**
      * Contains only links' IDs (of the links that belong to the
@@ -11,7 +12,7 @@ public class DemandPath {
     private int[] links;
 
     public DemandPath(String[] params) {
-        this.id = Integer.parseInt(params[0]);
+
         int[] tempLinks = new int[params.length-1];
 
         for(int i = 1; i<params.length; i++){
@@ -19,11 +20,6 @@ public class DemandPath {
         }
 
         this.links = tempLinks;
-    }
-
-    public DemandPath(int id, int[] links) {
-        this.id = id;
-        this.links = links;
     }
 
     public int[] getLinks() { return links; }
@@ -36,6 +32,14 @@ public class DemandPath {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getDemandId() {
+        return demandId;
+    }
+
+    public void setDemandId(int demandId) {
+        this.demandId = demandId;
     }
 
     @Override
@@ -52,9 +56,9 @@ public class DemandPath {
         }
 
         // typecast o to Complex so that we can compare data members
-        DemandPath DP = (DemandPath) o;
+        DemandPath dp = (DemandPath) o;
 
-        if(this.id == DP.getId() && Arrays.equals(this.links, DP.getLinks()))
+        if(this.id == dp.getId() && Arrays.equals(this.links, dp.getLinks()))
             return true;
         else
             return false;

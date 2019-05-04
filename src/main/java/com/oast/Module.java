@@ -1,17 +1,17 @@
 package com.oast;
 
 public class Module {
-    private double cost;
+    private float cost;
 
-    public Module(double cost) {
+    public Module(float cost) {
         this.cost = cost;
     }
 
-    public double getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 }

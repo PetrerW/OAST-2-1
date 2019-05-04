@@ -40,8 +40,9 @@ public class TopoParser {
 
         ArrayList<Demand> demands = this.readDemands();
 
-        Network Net = new Network(links, demands);
-        return Net;
+        Network net = new Network(links, demands);
+
+        return net;
     }
 
     public ArrayList<String> readFile(){
@@ -114,11 +115,11 @@ public class TopoParser {
     /**
      * Creates Demand object on the basis of lines read from .txt file
      * @param line First line of the Demand line group
-     * @param DemandID
+     * @param demandID
      * @return
      * @throws Exception
      */
-    public Demand readDemand(String line, int DemandID) throws Exception{
+    public Demand readDemand(String line, int demandID) throws Exception{
 
         String[] params = line.split(" ");
 
@@ -133,22 +134,26 @@ public class TopoParser {
             ArrayList<DemandPath> demandPaths = new ArrayList<>(numberOfDemandPaths);
 
             currentLine++;
+            int i = 1;
             for(;currentLine < currentLine + numberOfDemandPaths && currentLine < fileLines.size(); currentLine++){
                 line = fileLines.get(currentLine);
                 if(line.equals("")){
                     break;
                 }
                 else{
-                    DemandPath DP = readDemandPath(line);
-                    if(DP != null){
-                        demandPaths.add(DP);
+                    DemandPath dp = readDemandPath(line);
+                    dp.setDemandId(demandID);
+                    dp.setId(i);
+                    i++;
+                    if(dp != null){
+                        demandPaths.add(dp);
                     }
                     else
                         throw new Exception("Demand path was null");
                 }
             }
 
-            Demand D = new Demand(params, demandPaths, DemandID);
+            Demand D = new Demand(params, demandPaths, demandID);
             return D;
         }
     }

@@ -12,24 +12,6 @@ public class Link {
     private int linkModule;
     private int id;
 
-
-    public Link(Node start, Node end) {
-        this.start = start;
-        this.end = end;
-        this.numberOfModules = 1;
-        this.module = new Module(1);
-        this.linkModule = 1;
-    }
-
-    public Link(Node start, Node end, int numberOfModules, Module module, int linkModule, int id) {
-        this.start = start;
-        this.end = end;
-        this.numberOfModules = numberOfModules;
-        this.module = module;
-        this.linkModule = linkModule;
-        this.id = id;
-    }
-
     /**
      *
      * @param params Line in order: <start node ID> <end node ID> <number of modules> <module cost> <link module>
@@ -44,6 +26,10 @@ public class Link {
         this.id = id;
     }
 
+    public int getLinkModule() {
+        return linkModule;
+    }
+
     public void setNumberOfModules(int numberOfModules) {
         this.numberOfModules = numberOfModules;
     }
@@ -56,9 +42,7 @@ public class Link {
         return numberOfModules;
     }
 
-    public int getLinkModule() {
-        return linkModule;
-    }
+
 
     public Node getStart() {
         return start;
@@ -106,5 +90,9 @@ public class Link {
             return true;
         else
             return false;
+    }
+
+    public float getModuleCost(){
+        return module.getCost();
     }
 }

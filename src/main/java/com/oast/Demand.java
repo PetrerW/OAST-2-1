@@ -10,12 +10,14 @@ public class Demand {
     private int volume;
     private ArrayList<DemandPath> demandPaths;
     private int ID;
+    private int numberOfPaths;
 
     public Demand(Node start, Node end, int volume, ArrayList<DemandPath> demandPaths, int ID) {
         this.start = start;
         this.end = end;
         this.volume = volume;
         this.demandPaths = demandPaths;
+        this.numberOfPaths = demandPaths.size();
         this.ID = ID;
     }
 
@@ -30,6 +32,7 @@ public class Demand {
         this.end = new Node(Integer.parseInt(params[1]));
         this.volume = Integer.parseInt(params[2]);
         this.demandPaths = demandPaths;
+        this.numberOfPaths = demandPaths.size();
         this.ID = ID;
     }
 
@@ -67,6 +70,14 @@ public class Demand {
 
     public void setVolume(int volume) {
         this.volume = volume;
+    }
+
+    public int getNumberOfPaths() {
+        return numberOfPaths;
+    }
+
+    public void setNumberOfPaths(int numberOfPaths) {
+        this.numberOfPaths = numberOfPaths;
     }
 
     @Override
