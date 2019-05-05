@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args){
 
-        String path = "./net/net4";
+        String path = "./net/net4.txt";
         TopoParser topoParser = new TopoParser(path);
 
         BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());

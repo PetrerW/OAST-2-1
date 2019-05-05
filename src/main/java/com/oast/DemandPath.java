@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class DemandPath {
     private int id;
+    private int demandId;
 
     /**
      * Contains only links' IDs (of the links that belong to the
@@ -38,6 +39,14 @@ public class DemandPath {
         this.id = id;
     }
 
+    public int getDemandId() {
+        return demandId;
+    }
+
+    public void setDemandId(int demandId) {
+        this.demandId = demandId;
+    }
+
     @Override
     public boolean equals(Object o) {
         // If the object is compared with itself then return true
@@ -52,9 +61,9 @@ public class DemandPath {
         }
 
         // typecast o to Complex so that we can compare data members
-        DemandPath DP = (DemandPath) o;
+        DemandPath dp = (DemandPath) o;
 
-        if(this.id == DP.getId() && Arrays.equals(this.links, DP.getLinks()))
+        if(this.id == dp.getId() && Arrays.equals(this.links, dp.getLinks()))
             return true;
         else
             return false;
