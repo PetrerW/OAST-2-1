@@ -3,34 +3,52 @@ package com.oast;
 import sun.rmi.server.InactiveGroupException;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class EvolutionaryAlgorithm {
 
-
     // parametry algorytmu
-    private int population = 1000;
-    private double pCross = 0.25;
-    private double pMutate = 0.01;
-    private int maxTime = 300;//czas w [s]
-    private int numberOfGenerations = 100;
-    private int maxMutationNumber = 1000000;
-    private int maxNumberOfContinuousNonBetterSolutions = 10;
+    private int population;
+    private double pCross;
+    private double pMutate;
+    private int maxTime;//czas w [s]
+    private int maxNumberOfGenerations;
+    private int maxNumberOfMutations;
+    private int maxNumberOfContinuousNonBetterSolutions;
     private long seed = System.nanoTime();
 
-
-    private int numberOfContinuousNonBetterSolutions = 10;
-    private int tableLength = 1000;
-    private double p = 0.5;
-    private int maxCrossNumber = 200000;
-    private int maxNoChangeGenerations = 25000;
-    private int crossNumber = 0;
-    private int mutationNumber = 0;
-    private int noChangeGenerations = 0;
-
+    //parametry potrzebne do iteracji
     private int startTime = new Date().getSeconds();
     private int currentTime = new Date().getSeconds();
+    private int numberOfGenerations = 0;
+    private int numberOfMutations = 0;
+    private int numberOfContinuousNonBetterSolutions = 0;
 
-    private int numberOfChromosomes = 10000;
+    protected Network network;
+
+    public EvolutionaryAlgorithm(Network network) {
+        this.network = network;
+    }
+
+    public Network getNetwork() {
+        return network;
+    }
+
+    public void setNetwork(Network network) {
+        this.network = network;
+    }
+
+    public EvolutionaryAlgorithm(int population, double pCross, double pMutate, int maxTime, int maxNumberOfGenerations,
+                                 int maxNumberOfMutations, int maxNumberOfContinuousNonBetterSolutions, long seed) {
+        this.population = population;
+        this.pCross = pCross;
+        this.pMutate = pMutate;
+        this.maxTime = maxTime;
+        this.maxNumberOfGenerations = maxNumberOfGenerations;
+        this.maxNumberOfMutations = maxNumberOfMutations;
+        this.maxNumberOfContinuousNonBetterSolutions = maxNumberOfContinuousNonBetterSolutions;
+        this.seed = seed;
+    }
 
     private Map<Point, Integer> mapOfValues = new Map<Point, Integer>() {
         @Override
@@ -94,21 +112,6 @@ public class EvolutionaryAlgorithm {
         }
     };
 
-    public EvolutionaryAlgorithm() {
-    }
-
-    public EvolutionaryAlgorithm(int population, double pCross, double pMutate, int maxTime, int numberOfGenerations,
-                                 int maxMutationNumber, int maxNumberOfContinuousNonBetterSolutions, long seed) {
-        this.population = population;
-        this.pCross = pCross;
-        this.pMutate = pMutate;
-        this.maxTime = maxTime;
-        this.numberOfGenerations = numberOfGenerations;
-        this.maxMutationNumber = maxMutationNumber;
-        this.maxNumberOfContinuousNonBetterSolutions = maxNumberOfContinuousNonBetterSolutions;
-        this.seed = seed;
-    }
-
     //TODO Make it with numbers not strings
     /**
      *
@@ -121,12 +124,12 @@ public class EvolutionaryAlgorithm {
                 if(this.currentTime < this.maxTime)
                     return false;
                 break;
-            case "numberOfGenerations":
-                if(this.numberOfGenerations < this.maxNoChangeGenerations)
+            case "maxNumberOfGenerations":
+                if(this.numberOfGenerations < this.maxNumberOfGenerations)
                     return false;
                 break;
-            case "maxMutationNumber":
-                if(this.mutationNumber < this.maxMutationNumber)
+            case "maxNumberOfMutations":
+                if(this.numberOfMutations < this.maxNumberOfMutations)
                     return false;
                 break;
             case "numberOfContinuousNonBetterSolutions":
@@ -138,6 +141,13 @@ public class EvolutionaryAlgorithm {
         }
         return true;
     }
+
+    //PETLA
+   /*  while ((currentTime - startTime <= maxTime) && (numberOfGenerations <= maxNumberOfGenerations) && (numberOfMutations <= maxNumberOfMutations) && (numberOfContinuousNonBetterSolutions <= maxNumberOfContinuousNonBetterSolutions))
+    {
+
+    }*/
+
 
     public ArrayList<Solution> initializePopulation(){
 
@@ -167,4 +177,7 @@ public class EvolutionaryAlgorithm {
         return null;
     }
 
+
 }
+
+
