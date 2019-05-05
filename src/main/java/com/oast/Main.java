@@ -14,8 +14,8 @@ public class Main {
 
         //parametry określane przez użytkownika
         int population;
-        double pCross;
-        double pMutate;
+        float pCross;
+        float pMutate;
         int maxTime;
         int maxNumberOfGenerations;
         int maxNumberOfMutations;
@@ -38,7 +38,7 @@ public class Main {
                 System.out.println("Wprowadzono niepoprawna wartosc. Sprobuj ponownie!");
                 scanner.next();
             }
-            pCross = scanner.nextDouble();
+            pCross = scanner.nextFloat();
         } while (pCross <= 0 || pCross >= 1);
 
         do{
@@ -47,7 +47,7 @@ public class Main {
                 System.out.println("Wprowadzono niepoprawna wartosc. Sprobuj ponownie!");
                 scanner.next();
             }
-            pMutate = scanner.nextDouble();
+            pMutate = scanner.nextFloat();
         } while (pMutate <= 0 || pMutate >= 1);
 
         System.out.println("******Określenie kryteriów stopu algorytmu EA *******");
@@ -124,20 +124,56 @@ public class Main {
         }
 
         System.out.print("Obliczanie. Prosze czekac...");
-
-        EvolutionaryAlgorithm evolutionaryAlgorithm = new EvolutionaryAlgorithm(population,pCross,pMutate,maxTime,maxNumberOfGenerations,maxNumberOfMutations,maxNumberOfContinuousNonBetterSolutions,seed);
-
-       // String path = "./net/net4.txt";
-       // TopoParser topoParser = new TopoParser(path);
-
+/*
+        // bf
         BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
         List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
 
-        Solution solutionDAP = bruteForceAlgorithm.computeDAP(allSolutions);
-        Solution solutionDDAP = bruteForceAlgorithm.computeDDAP(allSolutions);
+        Solution solutionDAPbf = bruteForceAlgorithm.computeDAP(allSolutions);
+        Solution solutionDDAPbf = bruteForceAlgorithm.computeDDAP(allSolutions);
 
-        new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAP, bruteForceAlgorithm.getNetwork());
-        new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAP, bruteForceAlgorithm.getNetwork());
+        new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAPbf, bruteForceAlgorithm.getNetwork());
+        new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAPbf, bruteForceAlgorithm.getNetwork());
 
+
+*/
+        // evo
+        EvolutionaryAlgorithm evolutionaryAlgorithm = new EvolutionaryAlgorithmBuilder()
+                .setMaxMutationNumber(maxNumberOfMutations)
+                .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
+                .setMaxTime(maxTime)
+                .setNetwork(topoParser.readNetwork())
+                .setNumberOfChromosomes(population)
+                .setNumberOfGenerations(maxNumberOfGenerations)
+                .setpCross(pCross)
+                .setpMutate(pMutate)
+                .setSeed(seed)
+                .setPercentOfBestChromosomes(70)                //TODO z palca
+                .createEvolutionaryAlgorithm();
+
+        Solution solutionDDAPevo = evolutionaryAlgorithm.computeDDAP();
+        new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_ddap"), solutionDDAPevo, evolutionaryAlgorithm.getNetwork());
+
+
+/*
+        // evo
+        EvolutionaryAlgorithm evolutionaryAlgorithm2 = new EvolutionaryAlgorithmBuilder()
+                .setMaxMutationNumber(maxNumberOfMutations)
+                .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
+                .setMaxTime(maxTime)
+                .setNetwork(topoParser.readNetwork())
+                .setNumberOfChromosomes(population)
+                .setNumberOfGenerations(maxNumberOfGenerations)
+                .setpCross(pCross)
+                .setpMutate(pMutate)
+                .setSeed(seed)
+                .setPercentOfBestChromosomes(70)                //TODO z palca
+                .createEvolutionaryAlgorithm();
+
+
+        Solution solutionDAP = evolutionaryAlgorithm2.computeDAP();
+
+        new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_dap"), solutionDAP, evolutionaryAlgorithm2.getNetwork());
+*/
     }
 }

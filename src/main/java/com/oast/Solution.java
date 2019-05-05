@@ -1,8 +1,10 @@
 package com.oast;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
 
 
 public class Solution {
@@ -62,6 +64,24 @@ public class Solution {
     @Override
     public int hashCode() {
         return Objects.hash(cost, mapOfValues, capacitiesOfLinks, numberOfLinksWithExceededCapacity);
+    }
+
+    public int getNumberOfGenes() {
+        return mapOfValues.entrySet().stream()
+                .map(entry -> entry.getKey().getDemandId())
+                .collect(Collectors.toSet())
+                .size();
+    }
+
+    public Map<Point, Integer> getGene(int geneId) {
+        Map<Point, Integer> gene = new HashMap<>();
+        for (Map.Entry<Point, Integer> entry : mapOfValues.entrySet()) {
+            if (entry.getKey().getDemandId().equals(geneId)) {
+                gene.put(entry.getKey(), entry.getValue());
+            }
+        }
+
+        return gene;
     }
 }
 
