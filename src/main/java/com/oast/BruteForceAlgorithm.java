@@ -29,7 +29,7 @@ public class BruteForceAlgorithm {
         for (int i = 0; i < solutions.size(); i++) {
             List<Integer> costsOfLinks = solutions.get(i).getCapacitiesOfLinks();
             for (int j = 0; j < costsOfLinks.size(); j++) {
-                cost += network.getLinks().get(j).getModuleCost() * costsOfLinks.get(j);
+                cost += network.getLinks().get(j).getModule().getCost() * costsOfLinks.get(j);
             }
             if (cost < finalCost) {
                 finalCost = cost;
@@ -128,12 +128,13 @@ public class BruteForceAlgorithm {
             paths.addAll(demand.getDemandPaths());
         }
 
-        for (int j = 0; j < network.getNumberOfLinks(); j++) {
+        for (int j = 0; j < network.getLinks().size(); j++) {
             double sum = 0;
             for (DemandPath path : paths) {
                 List<Integer> list  = Arrays.stream(path.getLinks()).boxed().collect( Collectors.toList() );
                 if (list.contains(j + 1)) {
-                    sum += solution.getMapOfValues().get(new Point(path.getDemandId(), path.getId()));
+                    sum += solution.getMapOfValues()
+                            .get(new Point(path.getDemandId(), path.getId()));
                 }
             }
             linksCapacities.set(j, (int) Math.ceil(sum / (double) network.getLinks().get(j).getLinkModule()));

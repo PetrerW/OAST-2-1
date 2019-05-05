@@ -44,7 +44,7 @@ public class SolutionWriter {
             paths.addAll(demand.getDemandPaths());
         }
 
-        for (int j = 0; j < network.getNumberOfLinks(); j++) {
+        for (int j = 0; j < network.getLinks().size(); j++) {
             double sum = 0;
             for (DemandPath path : paths) {
                 List<Integer> list  = Arrays.stream(path.getLinks()).boxed().collect( Collectors.toList() );
@@ -60,7 +60,7 @@ public class SolutionWriter {
         for (int i = 0; i < signals.size(); i++) {
             text += i + 1 + " " + signals.get(i) + " " + cost.get(i) + "\n";
         }
-        text += "\n" + network.getNumberOfDemands() + "\n\n";
+        text += "\n" + network.getDemands().size() + "\n\n";
 
         for (int i = 0; i < network.getDemands().size(); i++) {
             int demandId = network.getDemands().get(i).getID();
