@@ -116,7 +116,6 @@ public class BruteForceAlgorithm {
         return solutions;
     }
 
-
     private List<Integer> computeLinksCapacitiesOfSolution(Solution solution) {
         List<Integer> linksCapacities = new ArrayList<>();
         for (int i = 0; i < network.getLinks().size(); i++) {
@@ -141,7 +140,6 @@ public class BruteForceAlgorithm {
         }
         return linksCapacities;
     }
-
 
     private List<Solution> getCombinationsOfOneDemand(Demand demand) {
         List<Solution> list = new ArrayList();
