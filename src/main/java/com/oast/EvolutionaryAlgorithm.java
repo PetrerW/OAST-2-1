@@ -24,7 +24,6 @@ public class EvolutionaryAlgorithm {
     private int numberOfGenerations;
     private int maxMutationNumber;
 
-
     // aktualny stan
     private int currentGeneration;
     private int currentMutation;
@@ -51,7 +50,7 @@ public class EvolutionaryAlgorithm {
     }
 
     /**
-     * @return False if the loop should go on
+     * @return True if the loop should go on
      */
     public boolean computeStopCriterion() {
 
@@ -99,12 +98,9 @@ public class EvolutionaryAlgorithm {
                 }
                 population.get(i).setCost(cost);
 
-
                 //zapisujemy najlepsze rozwiazanie w generacji
                 if (population.get(i).getCost() < bestSolutionOfGeneration.getCost())
                     bestSolutionOfGeneration = population.get(i);
-
-
             }
 
             // zapisujemy najlepsze rozwiazanie w historii
@@ -126,7 +122,6 @@ public class EvolutionaryAlgorithm {
         }
 
         System.out.println("Cost of best solution: " + bestSolution.getCost());
-
 
         return bestSolution;
     }
@@ -330,7 +325,6 @@ public class EvolutionaryAlgorithm {
                 .collect(Collectors.toList());
     }
 
-
     private List<Solution> getCombinationsOfOneDemand(Demand demand) {
         List<Solution> list = new ArrayList();
         Integer numberOfCombinations = calculateNewtonSymbol(demand.getNumberOfPaths() + demand.getVolume() - 1, demand.getVolume());
@@ -346,7 +340,6 @@ public class EvolutionaryAlgorithm {
         }
         return list;
     }
-
 
     private List<Integer> computeLinksCapacitiesOfSolution(Solution solution) {
         List<Integer> linksCapacities = new ArrayList<>();

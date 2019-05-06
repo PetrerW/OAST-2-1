@@ -37,7 +37,7 @@ public class BruteForceAlgorithm {
             }
             cost = 0.0;
         }
-        System.out.println("DDAP minimum cost: " + finalCost + "\n");
+        System.out.println("BF DDAP minimum cost: " + finalCost + "\n");
 
         return solutions.get(bestSolution);
     }
@@ -50,7 +50,7 @@ public class BruteForceAlgorithm {
             }
             solution.setNumberOfLinksWithExceededCapacity(maxValues.stream().filter(p -> p > 0).collect(Collectors.toList()).size());
             if (Collections.max(maxValues) == 0) {
-                System.out.println("DAP Solution found");
+                System.out.println("BF DDAP best solution: " + solution + "\n");
                 return solution;
             }
         }

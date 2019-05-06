@@ -21,83 +21,103 @@ public class Main {
         int maxNumberOfMutations;
         int maxNumberOfContinuousNonBetterSolutions;
         long seed;
+        String BF;
+        int criterionChoice;
         Scanner scanner = new Scanner(System.in);
 
         do{
-            System.out.println("Podaj liczność populacji startowej (liczba chromosomów):");
+            System.out.println("Type in start population size (chromosomes count):");
+//          System.out.println("Podaj liczność populacji startowej (liczba chromosomów):");
             while (!scanner.hasNextInt()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadziles niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
                 scanner.next();
             }
             population = scanner.nextInt();
         } while (population <= 0 );
 
         do{
-            System.out.println("Podaj prawdopodobieństwo wystąpienia krzyżowania <0,1>:");
-            while (!scanner.hasNextDouble()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Sprobuj ponownie!");
+            System.out.println("Type in crossover probability <0,1>:");
+//            System.out.println("Podaj prawdopodobieństwo wystąpienia krzyżowania <0,1>:");
+            while (!scanner.hasNext()){
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadziles niepoprawna wartosc. Sprobuj ponownie!");
                 scanner.next();
             }
             pCross = scanner.nextFloat();
-        } while (pCross <= 0 || pCross >= 1);
+        } while (pCross < 0 || pCross > 1);
 
         do{
-            System.out.println("Podaj prawdopodobieństwo wystąpienia mutacji <0,1>:");
-            while (!scanner.hasNextDouble()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Sprobuj ponownie!");
+            System.out.println("Type in mutation probability <0,1>:");
+//            System.out.println("Podaj prawdopodobieństwo wystąpienia mutacji <0,1>:");
+            while (!scanner.hasNext()){
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadziles niepoprawna wartosc. Sprobuj ponownie!");
                 scanner.next();
             }
             pMutate = scanner.nextFloat();
-        } while (pMutate <= 0 || pMutate >= 1);
+        } while (pMutate < 0 || pMutate > 1);
 
-        System.out.println("******Określenie kryteriów stopu algorytmu EA *******");
+        System.out.println("***********EA stop algorithm criterions**************");
+//        System.out.println("******Określenie kryteriów stopu algorytmu EA *******");
 
         do{
-            System.out.println("Podaj maksymalny czas pracy algorytmu w [s]:");
+            System.out.println("Type in maximal work time of the algorithm [s]:");
+//            System.out.println("Podaj maksymalny czas pracy algorytmu w [s]:");
             while (!scanner.hasNextInt()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
                 scanner.next();
             }
             maxTime = scanner.nextInt();
         } while (maxTime <= 0 );
 
         do{
-            System.out.println("Podaj maksymalna liczbe generacji:");
+            System.out.println("Type in maximal number of generations:");
+//            System.out.println("Podaj maksymalna liczbe generacji:");
             while (!scanner.hasNextInt()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
                 scanner.next();
             }
             maxNumberOfGenerations = scanner.nextInt();
         } while (maxNumberOfGenerations <= 0 );
 
         do{
-            System.out.println("Podaj maksymalna liczbe mutacji:");
+            System.out.println("Type in maximal number of mutations:");
+//            System.out.println("Podaj maksymalna liczbe mutacji:");
             while (!scanner.hasNextInt()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
                 scanner.next();
             }
             maxNumberOfMutations = scanner.nextInt();
         } while (maxNumberOfMutations <= 0 );
 
         do{
-            System.out.println("Podaj maksymalna liczbe prób poprawy najlepszego rozwiązania:");
+            System.out.println("Type in maximal number of the best solution improvement trials:");
+//            System.out.println("Podaj maksymalna liczbe prób poprawy najlepszego rozwiązania:");
             while (!scanner.hasNextInt()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
                 scanner.next();
             }
             maxNumberOfContinuousNonBetterSolutions = scanner.nextInt();
         } while (maxNumberOfContinuousNonBetterSolutions <= 0 );
 
         do{
-            System.out.println("Wskaż ziarno dla generatora liczb losowych:");
+            System.out.println("Type in random number generator seed:");
+//            System.out.println("Wskaż ziarno dla generatora liczb losowych:");
             while (!scanner.hasNextLong()){
-                System.out.println("Wprowadzono niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadziles niepoprawna wartosc. Podaj liczbe i sprobuj ponownie!");
                 scanner.next();
             }
-            seed = scanner.nextInt();
+            seed = scanner.nextLong();
         } while (seed <= 0 );
 
-        System.out.println("****** Wybór pliku topologii sieci i zapotrzebowań *******");
+        System.out.println("****** Choice of the file with the network *******");
+//        System.out.println("****** Wybór pliku topologii sieci i zapotrzebowań *******");
         System.out.println("1: net12_1.txt");
         System.out.println("2: net12_2.txt ");
         System.out.println("3: net4.txt");
@@ -119,24 +139,14 @@ public class Main {
                 topoParser = new TopoParser(path);
                 break;
             default:
-                System.out.println("Wprowadzono niepoprawna wartosc. Sprobuj ponownie!");
+                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
+//                System.out.println("Wprowadziles niepoprawna wartosc. Sprobuj ponownie!");
                 break;
         }
 
-        System.out.print("Obliczanie. Prosze czekac...");
-/*
-        // bf
-        BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
-        List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
+        System.out.println("Computing. Please wait...");
+//        System.out.print("Obliczanie. Prosze czekac...");
 
-        Solution solutionDAPbf = bruteForceAlgorithm.computeDAP(allSolutions);
-        Solution solutionDDAPbf = bruteForceAlgorithm.computeDDAP(allSolutions);
-
-        new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAPbf, bruteForceAlgorithm.getNetwork());
-        new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAPbf, bruteForceAlgorithm.getNetwork());
-
-
-*/
         // evo
         EvolutionaryAlgorithm evolutionaryAlgorithm = new EvolutionaryAlgorithmBuilder()
                 .setMaxMutationNumber(maxNumberOfMutations)
@@ -154,6 +164,31 @@ public class Main {
         Solution solutionDDAPevo = evolutionaryAlgorithm.computeDDAP();
         new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_ddap"), solutionDDAPevo, evolutionaryAlgorithm.getNetwork());
 
+        System.out.println("Do you want to try solving the problem with bruteforce method? (yes/no)");
+        do{
+            while (!scanner.hasNextLine()){
+                System.out.println("You have typed in a wrong value. Please pass \"yes\" or \"no\".");
+                scanner.next();
+            }
+            BF = scanner.nextLine();
+        } while (!BF.equals("yes") && !BF.equals("no"));
+
+        if (BF.equals("yes")) {
+            try {
+                //bf
+                BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
+                List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
+
+                Solution solutionDAPbf = bruteForceAlgorithm.computeDAP(allSolutions);
+                Solution solutionDDAPbf = bruteForceAlgorithm.computeDDAP(allSolutions);
+
+                new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAPbf, bruteForceAlgorithm.getNetwork());
+                new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAPbf, bruteForceAlgorithm.getNetwork());
+            } catch (Exception e) {
+                System.out.println("Exception caught: " + e.getMessage());
+                System.out.println("Make sure the network is not too big for the BF algorithm");
+            }
+        }
 
 /*
         // evo

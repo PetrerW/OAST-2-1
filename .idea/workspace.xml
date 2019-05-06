@@ -2,25 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a748415-a38a-4b13-9d1d-c27fa46cb901" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/net12_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/net/net12_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/BruteForceAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/BruteForceAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/Link.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/Link.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/Module.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/Module.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/Network.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/Network.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/oast/TopoParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/oast/TopoParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/Demand.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/DemandPath.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/Link.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/Module.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/Network.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/oast/TopoParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/DemandPathTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/DemandPathTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/DemandTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/DemandTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/DemandTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/DemandTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/DemandTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/DemandTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/NetworkTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/oast/TopoParserTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,23 +46,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/TopoParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3546">
-              <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5188#5194#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/oast/TopoParserTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+            <state relative-caret-position="828">
+              <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#290#291#0" expanded="true" />
@@ -66,27 +60,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Module.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-              <folding>
-                <element signature="e#98#99#0" expanded="true" />
-                <element signature="e#130#131#0" expanded="true" />
-                <element signature="e#161#162#0" expanded="true" />
-                <element signature="e#188#189#0" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Network.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+            <state relative-caret-position="-258">
+              <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#351#352#0" expanded="true" />
@@ -102,36 +79,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="160" column="49" selection-start-line="160" selection-start-column="49" selection-end-line="160" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#612#613#0" expanded="true" />
-                <element signature="e#644#645#0" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#734#735#0" expanded="true" />
-                <element signature="e#802#803#0" expanded="true" />
-                <element signature="e#838#839#0" expanded="true" />
-                <element signature="e#910#911#0" expanded="true" />
-                <element signature="e#946#947#0" expanded="true" />
-                <element signature="e#1006#1007#0" expanded="true" />
-                <element signature="e#1041#1042#0" expanded="true" />
-                <element signature="e#1115#1116#0" expanded="true" />
-                <element signature="e#1150#1151#0" expanded="true" />
-                <element signature="e#1213#1214#0" expanded="true" />
-                <element signature="e#1248#1249#0" expanded="true" />
-                <element signature="e#1466#1467#0" expanded="true" />
-                <element signature="e#1501#1502#0" expanded="true" />
-                <element signature="e#1566#1567#0" expanded="true" />
-                <element signature="e#1601#1602#0" expanded="true" />
-                <element signature="e#1675#1676#0" expanded="true" />
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#2773#2774#0" expanded="true" />
-                <element signature="e#2800#2801#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-72">
+              <caret line="128" selection-start-line="128" selection-end-line="128" />
             </state>
           </provider>
         </entry>
@@ -139,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Node.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="576">
               <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
               <folding>
                 <element signature="e#83#84#0" expanded="true" />
@@ -152,17 +104,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/BruteForceAlgorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="414">
+              <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="40" column="92" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/SolutionWriter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="252">
+              <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithmBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
             </state>
           </provider>
         </entry>
@@ -170,7 +140,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Link.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1962">
+            <state relative-caret-position="1674">
               <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
               <folding>
                 <element signature="e#1318#1319#0" expanded="true" />
@@ -197,14 +167,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
-              <folding>
-                <element signature="e#729#730#0" expanded="true" />
-                <element signature="e#754#755#0" expanded="true" />
-                <element signature="e#787#788#0" expanded="true" />
-                <element signature="e#815#816#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="900">
+              <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -224,12 +188,15 @@
       <find>float</find>
       <find>final</find>
       <find>Point</find>
+      <find>Wprowadzono</find>
+      <find>System.out.println(&quot;You have typed in a wrong value. Please pass a number and try again.&quot;);</find>
     </findStrings>
     <replaceStrings>
       <replace>double</replace>
       <replace>private int</replace>
       <replace>private double</replace>
       <replace>private final int</replace>
+      <replace>Wprowadziles</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -256,15 +223,17 @@
         <option value="$PROJECT_DIR$/src/test/java/com/oast/DemandPathTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/oast/DemandTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/oast/NetworkTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/oast/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/oast/TopoParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/Link.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/Module.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/Network.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/Node.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/TopoParser.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/oast/TopoParserTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/oast/SolutionWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/oast/BruteForceAlgorithm.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithm.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/oast/Main.java" />
       </list>
     </option>
   </component>
@@ -278,7 +247,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-130" />
     <option name="y" value="-15" />
-    <option name="width" value="1552" />
+    <option name="width" value="1554" />
     <option name="height" value="840" />
   </component>
   <component name="ProjectView">
@@ -286,50 +255,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="oast" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
           <expand>
@@ -376,6 +301,50 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="oast" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OAST21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OAST-2-1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,7 +355,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -408,8 +377,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TopoParserTest.readNetwork">
-    <configuration name="DemandPathTest.equals1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oast.Main" />
       <module name="OAST-2-1" />
       <extension name="coverage">
         <pattern>
@@ -417,10 +387,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.oast" />
-      <option name="MAIN_CLASS_NAME" value="com.oast.DemandPathTest" />
-      <option name="METHOD_NAME" value="equals1" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -457,7 +423,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TopoParserTest.readLinks" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TopoParserTest.readLink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="OAST-2-1" />
       <extension name="coverage">
         <pattern>
@@ -467,7 +433,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.oast" />
       <option name="MAIN_CLASS_NAME" value="com.oast.TopoParserTest" />
-      <option name="METHOD_NAME" value="readLinks" />
+      <option name="METHOD_NAME" value="readLink" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -491,11 +457,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.TopoParserTest.readLink" />
         <item itemvalue="JUnit.TopoParserTest.readNetwork" />
         <item itemvalue="JUnit.NetworkTest.equals1" />
         <item itemvalue="JUnit.DemandTest.equals1" />
-        <item itemvalue="JUnit.DemandPathTest.equals1" />
-        <item itemvalue="JUnit.TopoParserTest.readLinks" />
       </list>
     </recent_temporary>
   </component>
@@ -566,19 +532,17 @@
       <option name="project" value="LOCAL" />
       <updated>1556570360056</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Started EvolutionaryAlgorithm class">
+      <created>1556999591880</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556999591880</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TopoParserTest_readNetwork - 2019.04.29 at 22h 09m 19s.xml">
-      <configuration name="TopoParserTest.readNetwork" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TopoParserTest_readNetwork - 2019.04.29 at 22h 11m 02s.xml">
-      <configuration name="TopoParserTest.readNetwork" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TopoParserTest_readNetwork - 2019.04.29 at 22h 11m 05s.xml">
-      <configuration name="TopoParserTest.readNetwork" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TopoParserTest_readNetwork - 2019.04.29 at 22h 12m 15s.xml">
       <configuration name="TopoParserTest.readNetwork" configurationId="JUnit" />
     </history-entry>
@@ -600,12 +564,21 @@
     <history-entry file="TopoParserTest_readNetwork - 2019.04.29 at 22h 37m 26s.xml">
       <configuration name="TopoParserTest.readNetwork" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="TopoParserTest_readNetwork - 2019.05.06 at 16h 06m 04s.xml">
+      <configuration name="TopoParserTest.readNetwork" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TopoParserTest_readLink - 2019.05.06 at 17h 16m 23s.xml">
+      <configuration name="TopoParserTest.readLink" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TopoParserTest_readLink - 2019.05.06 at 17h 18m 37s.xml">
+      <configuration name="TopoParserTest.readLink" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990366" visible="true" weight="0.23624161" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990366" visible="true" weight="0.17516778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -615,14 +588,14 @@
       <window_info id="Favorites" order="7" sideWeight="0.5009634" side_tool="true" weight="0.20117396" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286517" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21579961" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.18208092" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2949438" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24157304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286517" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.16011237" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -634,7 +607,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4990366" visible="true" weight="0.10604027" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990366" visible="true" weight="0.17516778" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -644,14 +617,14 @@
       <window_info id="Favorites" order="7" sideWeight="0.5009634" side_tool="true" weight="0.20117396" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286517" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.21579961" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.18208092" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2963483" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.24157304" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286517" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.16011237" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -663,6 +636,46 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout-to-restore>
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start writing parser" />
     <MESSAGE value="Add network class. Need to check if everything is included (From BFA notation)" />
@@ -671,7 +684,8 @@
     <MESSAGE value="Tested readLink and readLinks, started readDemand" />
     <MESSAGE value="Extended reading Demand" />
     <MESSAGE value="Finished readNetwork(), need to fix a bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished readNetwork(), need to fix a bug" />
+    <MESSAGE value="Started EvolutionaryAlgorithm class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started EvolutionaryAlgorithm class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -685,7 +699,7 @@
         <line-breakpoint enabled="true" type="java-line">
           <condition expression="Arrays.equals(this.links, DP.getLinks()) == false" language="JAVA" />
           <url>file://$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java</url>
-          <line>45</line>
+          <line>54</line>
           <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
@@ -875,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OAST-2-1.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Date.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -924,43 +931,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/TopoParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/SolutionWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/BruteForceAlgorithm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="45" column="9" lean-forward="true" selection-start-line="45" selection-start-column="9" selection-end-line="45" selection-end-column="9" />
+        <state relative-caret-position="3456">
+          <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
           <folding>
-            <element signature="e#729#730#0" expanded="true" />
-            <element signature="e#754#755#0" expanded="true" />
-            <element signature="e#787#788#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#5188#5194#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Module.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="e#98#99#0" expanded="true" />
+            <element signature="e#130#131#0" expanded="true" />
+            <element signature="e#161#162#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OAST-2-1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+          <folding>
+            <element signature="e#83#84#0" expanded="true" />
+            <element signature="e#111#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Link.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1962">
+        <state relative-caret-position="1674">
           <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
           <folding>
             <element signature="e#1318#1319#0" expanded="true" />
@@ -983,37 +1000,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/oast/TopoParserTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/DemandPath.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#290#291#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Module.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="e#98#99#0" expanded="true" />
-            <element signature="e#130#131#0" expanded="true" />
-            <element signature="e#161#162#0" expanded="true" />
-            <element signature="e#188#189#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="900">
+          <caret line="54" column="9" selection-start-line="54" selection-start-column="9" selection-end-line="54" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Network.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        <state relative-caret-position="-258">
+          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#351#352#0" expanded="true" />
@@ -1028,57 +1025,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Node.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/oast/TopoParserTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="1" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+        <state relative-caret-position="828">
+          <caret line="46" column="30" selection-start-line="46" selection-start-column="30" selection-end-line="46" selection-end-column="30" />
           <folding>
-            <element signature="e#83#84#0" expanded="true" />
-            <element signature="e#111#112#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#290#291#0" expanded="true" />
+            <element signature="e#334#335#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/TopoParser.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithmBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3546">
-          <caret line="197" column="1" selection-start-line="197" selection-start-column="1" selection-end-line="197" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5188#5194#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="504">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/SolutionWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/BruteForceAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="51" column="50" selection-start-line="51" selection-start-column="50" selection-end-line="51" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/EvolutionaryAlgorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="160" column="49" selection-start-line="160" selection-start-column="49" selection-end-line="160" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#946#947#0" expanded="true" />
-            <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1115#1116#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
-            <element signature="e#1213#1214#0" expanded="true" />
-            <element signature="e#1248#1249#0" expanded="true" />
-            <element signature="e#1466#1467#0" expanded="true" />
-            <element signature="e#1501#1502#0" expanded="true" />
-            <element signature="e#1566#1567#0" expanded="true" />
-            <element signature="e#1601#1602#0" expanded="true" />
-            <element signature="e#1675#1676#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#2773#2774#0" expanded="true" />
-            <element signature="e#2800#2801#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-72">
+          <caret line="128" selection-start-line="128" selection-end-line="128" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/oast/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="40" column="92" selection-start-line="40" selection-start-column="92" selection-end-line="40" selection-end-column="92" />
         </state>
       </provider>
     </entry>
