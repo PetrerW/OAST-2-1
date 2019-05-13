@@ -1,5 +1,7 @@
 package com.oast;
 
+import com.google.common.base.Stopwatch;
+
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
@@ -11,7 +13,7 @@ public class Main {
     public Main() {
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException {
 
         //parametry określane przez użytkownika
         int population;
@@ -154,6 +156,8 @@ public class Main {
 
                     if (choiceDAPorDDAP.equals("DAP")) {
                         //DAP
+                        long startDAP = System.nanoTime();
+
                         EvolutionaryAlgorithm evolutionaryAlgorithm2 = new EvolutionaryAlgorithmBuilder()
                                 .setMaxMutationNumber(maxNumberOfMutations)
                                 .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
@@ -168,10 +172,14 @@ public class Main {
                                 .createEvolutionaryAlgorithm();
 
                         Solution solutionDAP = evolutionaryAlgorithm2.computeDAP();
-
+                        long endDAP = System.nanoTime();
+                        System.out.println("Time of optimization : " + (endDAP - startDAP)/ 1000000000 + "," + (((endDAP - startDAP)/ 1000000) - (((endDAP - startDAP)/ 1000000000) * 1000)) + " s");
                         new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_dap"), solutionDAP, evolutionaryAlgorithm2.getNetwork());
+
                     } else {
                         //DDAP
+                        long startDDAP = System.nanoTime();
+
                         EvolutionaryAlgorithm evolutionaryAlgorithm = new EvolutionaryAlgorithmBuilder()
                                 .setMaxMutationNumber(maxNumberOfMutations)
                                 .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
@@ -186,6 +194,8 @@ public class Main {
                                 .createEvolutionaryAlgorithm();
 
                         Solution solutionDDAPevo = evolutionaryAlgorithm.computeDDAP();
+                        long endDDAP = System.nanoTime();
+                        System.out.println("Time of optimization : " + (endDDAP - startDDAP)/ 1000000000 + "," + (((endDDAP - startDDAP)/ 1000000) - (((endDDAP - startDDAP)/ 1000000000) * 1000)) + " s");
                         new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_ddap"), solutionDDAPevo, evolutionaryAlgorithm.getNetwork());
                     }
 
@@ -207,10 +217,15 @@ public class Main {
                         if (choiceDAPorDDAP.equals("DAP")) {
                             //DAP
                             try {
+                                long startDAP = System.nanoTime();
+
                                 BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
                                 List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
 
                                 Solution solutionDAPbf = bruteForceAlgorithm.computeDAP(allSolutions);
+                                long endDAP = System.nanoTime();
+                                System.out.println("Time of optimization : " + (endDAP - startDAP)/ 1000000000 + "," + (((endDAP - startDAP)/ 1000000) - (((endDAP - startDAP)/ 1000000000) * 1000)) + " s");
+
                                 new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAPbf, bruteForceAlgorithm.getNetwork());
                             }
                             catch (Exception e) {
@@ -220,11 +235,15 @@ public class Main {
                         } else {
                             //DDAP
                             try {
+                                long startDDAP = System.nanoTime();
 
                                 BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
                                 List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
 
                                 Solution solutionDDAPbf = bruteForceAlgorithm.computeDDAP(allSolutions);
+                                long endDDAP = System.nanoTime();
+                                System.out.println("Time of optimization : " + (endDDAP - startDDAP)/ 1000000000 + "," + (((endDDAP - startDDAP)/ 1000000) - (((endDDAP - startDDAP)/ 1000000000) * 1000)) + " s");
+
                                 new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAPbf, bruteForceAlgorithm.getNetwork());
                             }
                             catch (Exception e) {
@@ -257,183 +276,6 @@ public class Main {
 
         } while(choiceMenu != 4);
 
-/*
-        System.out.println("****** Choice of the file with the network *******");
-        System.out.println("1: net12_1.txt");
-        System.out.println("2: net12_2.txt ");
-        System.out.println("3: net4.txt");
-        System.out.println("4: Exit");
-
-        int choice = scanner.nextInt();
-        switch (choice) {
-            case 1:
-                path = "./net/net12_1.txt";
-                topoParser = new TopoParser(path);
-                break;
-            case 2:
-                path = "./net/net12_2.txt";
-                topoParser = new TopoParser(path);
-                break;
-            case 3:
-                path = "./net/net4.txt";
-                topoParser = new TopoParser(path);
-                break;
-            case 4:
-                System.exit(0);
-                break;
-            default:
-                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
-                break;
-        }
-
-        System.out.println("****** Choice of the algorithm *******");
-        System.out.println("1: EvolutionaryAlgorithm");
-        System.out.println("2: BruteForce ");
-        System.out.println("3: Return ");
-
-        int choice2 = scanner.nextInt();
-        switch (choice2) {
-            case 1:
-                System.out.println("Do you want to try solving the problem DAP or DDAP?");
-
-                do{
-                    while (!scanner.hasNextLine()){
-                        System.out.println("You have typed in a wrong value. Please pass \"DAP\" or \"DDAP\".");
-                        scanner.next();
-                    }
-                    choiceDAPorDDAP = scanner.nextLine();
-                } while (!choiceDAPorDDAP.equals("DAP") && !choiceDAPorDDAP.equals("DDAP"));
-
-                System.out.println("Computing. Please wait...");
-
-                if (choiceDAPorDDAP.equals("DAP")) {
-                        //DAP
-                        EvolutionaryAlgorithm evolutionaryAlgorithm2 = new EvolutionaryAlgorithmBuilder()
-                                .setMaxMutationNumber(maxNumberOfMutations)
-                                .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
-                                .setMaxTime(maxTime)
-                                .setNetwork(topoParser.readNetwork())
-                                .setNumberOfChromosomes(population)
-                                .setNumberOfGenerations(maxNumberOfGenerations)
-                                .setpCross(pCross)
-                                .setpMutate(pMutate)
-                                .setSeed(seed)
-                                .setPercentOfBestChromosomes(70)                //TODO z palca
-                                .createEvolutionaryAlgorithm();
-
-                        Solution solutionDAP = evolutionaryAlgorithm2.computeDAP();
-
-                        new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_dap"), solutionDAP, evolutionaryAlgorithm2.getNetwork());
-                }
-                else{
-                    //DDAP
-                    EvolutionaryAlgorithm evolutionaryAlgorithm = new EvolutionaryAlgorithmBuilder()
-                            .setMaxMutationNumber(maxNumberOfMutations)
-                            .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
-                            .setMaxTime(maxTime)
-                            .setNetwork(topoParser.readNetwork())
-                            .setNumberOfChromosomes(population)
-                            .setNumberOfGenerations(maxNumberOfGenerations)
-                            .setpCross(pCross)
-                            .setpMutate(pMutate)
-                            .setSeed(seed)
-                            .setPercentOfBestChromosomes(70)                //TODO z palca
-                            .createEvolutionaryAlgorithm();
-
-                    Solution solutionDDAPevo = evolutionaryAlgorithm.computeDDAP();
-                    new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_ddap"), solutionDDAPevo, evolutionaryAlgorithm.getNetwork());
-                }
-
-                break;
-            case 2:
-
-                try {
-                    //bf
-                    BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
-                    List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
-
-                    Solution solutionDAPbf = bruteForceAlgorithm.computeDAP(allSolutions);
-                    Solution solutionDDAPbf = bruteForceAlgorithm.computeDDAP(allSolutions);
-
-                    new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAPbf, bruteForceAlgorithm.getNetwork());
-                    new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAPbf, bruteForceAlgorithm.getNetwork());
-                } catch (Exception e) {
-                    System.out.println("Exception caught: " + e.getMessage());
-                    System.out.println("Make sure the network is not too big for the BF algorithm");
-                }
-                break;
-            case 3:
-                break;
-
-            default:
-                System.out.println("You have typed in a wrong value. Please pass a number and try again.");
-                break;
-        }
-*/
-/*
-        // evo
-        EvolutionaryAlgorithm evolutionaryAlgorithm = new EvolutionaryAlgorithmBuilder()
-                .setMaxMutationNumber(maxNumberOfMutations)
-                .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
-                .setMaxTime(maxTime)
-                .setNetwork(topoParser.readNetwork())
-                .setNumberOfChromosomes(population)
-                .setNumberOfGenerations(maxNumberOfGenerations)
-                .setpCross(pCross)
-                .setpMutate(pMutate)
-                .setSeed(seed)
-                .setPercentOfBestChromosomes(70)                //TODO z palca
-                .createEvolutionaryAlgorithm();
-
-        Solution solutionDDAPevo = evolutionaryAlgorithm.computeDDAP();
-        new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_ddap"), solutionDDAPevo, evolutionaryAlgorithm.getNetwork());
-
-        System.out.println("Do you want to try solving the problem with bruteforce method? (yes/no)");
-        do{
-            while (!scanner.hasNextLine()){
-                System.out.println("You have typed in a wrong value. Please pass \"yes\" or \"no\".");
-                scanner.next();
-            }
-            BF = scanner.nextLine();
-        } while (!BF.equals("yes") && !BF.equals("no"));
-
-        if (BF.equals("yes")) {
-            try {
-                //bf
-                BruteForceAlgorithm bruteForceAlgorithm = new BruteForceAlgorithm(topoParser.readNetwork());
-                List<Solution> allSolutions = bruteForceAlgorithm.getAllSolutions();
-
-                Solution solutionDAPbf = bruteForceAlgorithm.computeDAP(allSolutions);
-                Solution solutionDDAPbf = bruteForceAlgorithm.computeDDAP(allSolutions);
-
-                new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_dap"), solutionDAPbf, bruteForceAlgorithm.getNetwork());
-                new SolutionWriter().writeSolutionToFile(path + ("_solution_bruteforce_ddap"), solutionDDAPbf, bruteForceAlgorithm.getNetwork());
-            } catch (Exception e) {
-                System.out.println("Exception caught: " + e.getMessage());
-                System.out.println("Make sure the network is not too big for the BF algorithm");
-            }
-        }
-*/
-/*
-        // evo
-        EvolutionaryAlgorithm evolutionaryAlgorithm2 = new EvolutionaryAlgorithmBuilder()
-                .setMaxMutationNumber(maxNumberOfMutations)
-                .setMaxNumberOfContinuousNonBetterSolutions(maxNumberOfContinuousNonBetterSolutions)
-                .setMaxTime(maxTime)
-                .setNetwork(topoParser.readNetwork())
-                .setNumberOfChromosomes(population)
-                .setNumberOfGenerations(maxNumberOfGenerations)
-                .setpCross(pCross)
-                .setpMutate(pMutate)
-                .setSeed(seed)
-                .setPercentOfBestChromosomes(70)                //TODO z palca
-                .createEvolutionaryAlgorithm();
-
-
-        Solution solutionDAP = evolutionaryAlgorithm2.computeDAP();
-
-        new SolutionWriter().writeSolutionToFile(path + ("_solution_evo_dap"), solutionDAP, evolutionaryAlgorithm2.getNetwork());
-*/
     }
 
 }
